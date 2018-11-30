@@ -8,5 +8,4 @@ public class BeanReference {
 	private String name;
 	
 	private Object bean;
-	
 }
