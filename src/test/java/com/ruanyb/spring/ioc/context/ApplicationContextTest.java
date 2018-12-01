@@ -3,7 +3,7 @@ package com.ruanyb.spring.ioc.context;
 
 import org.junit.Test;
 
-import com.ruanyb.spring.ioc.HelloWorldService;
+import com.ruanyb.spring.ioc.HelloWorldServiceImpl;
 
 public class ApplicationContextTest {
 	
@@ -11,7 +11,7 @@ public class ApplicationContextTest {
 	public void test() throws Exception {
 		AbstractApplicationContext abstractApplicationContext = new ClasspathXmlApplicationContext("tinyioc.xml");
 		
-		HelloWorldService helloWorldService = (HelloWorldService) abstractApplicationContext.getBean("helloWorldService");
+		HelloWorldServiceImpl helloWorldService = (HelloWorldServiceImpl) abstractApplicationContext.getBean("helloWorldService");
 		helloWorldService.helloWorld();
 	}
 }

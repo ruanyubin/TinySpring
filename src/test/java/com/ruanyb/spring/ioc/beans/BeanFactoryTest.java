@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import com.ruanyb.spring.ioc.HelloWorldService;
+import com.ruanyb.spring.ioc.HelloWorldServiceImpl;
 import com.ruanyb.spring.ioc.beans.BeanDefinition;
 import com.ruanyb.spring.ioc.beans.factory.AbstractBeanFactory;
 import com.ruanyb.spring.ioc.beans.factory.AutowireCapableBeanFactory;
@@ -23,7 +23,7 @@ public class BeanFactoryTest {
 		for(Map.Entry<String, BeanDefinition> entry : xmlBeanDefinitionReader.getRegister().entrySet()) {
 			beanFactory.registerBeanDefinition(entry.getKey(), entry.getValue());
 		}
-		HelloWorldService helloWorldService = (HelloWorldService)beanFactory.getBean("helloWorldService");
+		HelloWorldServiceImpl helloWorldService = (HelloWorldServiceImpl)beanFactory.getBean("helloWorldService");
 		helloWorldService.helloWorld();
 	}
 
